@@ -1,0 +1,160 @@
+/* Join.css and index.css combined */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+  background-color: #f9fafb;
+  color: #232836;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  width: 250px;
+  height: 350px; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* Fixed height for images */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 14px;
+}
+.volunteer {
+  background-color: #619bc7 !important;
+  transition: all 0.15s ease;
+}
+
+.volunteer:hover {
+  background-color: #e3f2fd !important;
+}
+
+.organization {
+  background-color: #7ec483 !important;
+  transition: all 0.15s ease;
+}
+
+.organization:hover {
+  background-color: #e8f5e9 !important;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Limit the width to avoid stretching */
+  box-sizing: border-box;
+}
+
+.footerNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  justify-content: center; /* Center the navigation items */
+  margin: 0;
+}
+
+.footerNav ul li {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 calc(33.33%-30px);
+  min-width: 80px;
+}
+
+.footerNav ul li a {
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.logo a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the color from the parent element */
+  font-size: inherit; /* Inherits the font size from the parent element */
+}

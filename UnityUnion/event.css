@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: #4b6cb7;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+}
+
+.brand-name {
+    font-size: 30px;
+  font-weight: bold;
+  color: aliceblue;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+
+}
+
+.search {
+    margin-left: 100px;
+    display: flex;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search button {
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.user {
+    position: relative;
+}
+
+.profile-picture-label {
+    margin-left: 900px;
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-picture-label i {
+    font-size: 25px;
+}
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    width: 250px;
+    height: calc(100vh - 75px); /* Adjust height to fit below the header */
+    background-color:#fff;
+    top: 75px; /* Adjust this value to match the height of the header */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-menu li {
+    padding: 20px 25px;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    flex: 3; /* take up equal space */
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.side-menu li i {
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.side-menu li:hover {
+    background:  #e0f0ff;
+    border-radius: 7px;
+}
+
+/* Main Content */
+.container {
+    flex-grow: 1;
+    margin-top: 80px;
+    margin-left: 250px; /* Ensure content does not overlap with the side menu */
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.event-form {
+    display: flex;
+}
+
+.event-photo, .event-details {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.event-photo {
+    flex: 1;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}
+
+.event-photo label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-photo input {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#photo-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 300px;
+    display: none;
+}
+
+.event-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-actions button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.events-section {
+    margin-bottom: 20px;
+}
+
+.event-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 10px;
+    flex: 1;
+    margin-left: 30px;
+
+}
+
+.event-details h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.event-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Limit the width to avoid stretching */
+    box-sizing: border-box;
+}
+
+.footerNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+    justify-content: center; /* Center the navigation items */
+    margin: 0;
+}
+
+.footerNav ul li {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 calc(33.33%-30px);
+    min-width: 80px;
+}
+
+.footerNav ul li a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.socialIcons {
+    margin-bottom: 10px;
+    display: flex; /* Ensure social icons are in a row */
+    justify-content: center; /* Center the social icons */
+}
+
+.socialIcons a {
+    margin: 0 10px; /* Margin on both sides for equal spacing */
+    color: #fff;
+    text-decoration: none;
+}
+
+.socialIcons a i {
+    font-size: 1.6em;
+    color: white;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.socialIcons a:hover i {
+    color: black;
+    transition: 0.5s;
+}
